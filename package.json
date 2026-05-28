@@ -1,0 +1,63 @@
+{
+  "name": "szamlazz-agent",
+  "version": "0.1.0",
+  "description": "TypeScript client for the Szamlazz.hu Szamla Agent API and Penzugyi adatkapcsolat (Financial Data Connection) receiver. Agent key (token) auth.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Klafaa/szamlazz-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Klafaa/szamlazz-agent/issues"
+  },
+  "homepage": "https://github.com/Klafaa/szamlazz-agent#readme",
+  "author": "Wudi Antal (Klafa) <theklafaa@gmail.com>",
+  "keywords": [
+    "szamlazz",
+    "szamlazz.hu",
+    "szamla-agent",
+    "szamla",
+    "nyugta",
+    "invoice",
+    "hungary",
+    "api"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "fast-xml-parser": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.41",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
