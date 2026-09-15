@@ -7,7 +7,7 @@ TypeScript client for the [Szamlazz.hu Szamla Agent API](https://docs.szamlazz.h
 - Full operation coverage: invoice create/storno, payment registration, PDF & XML retrieval, proforma deletion, receipt create/storno/get/send, taxpayer lookup.
 - Financial Data Connection PUSH receiver (`FinancialDataReceiver`).
 - Typed request options and parsed responses.
-- Native `fetch` — no HTTP dependency. Works on Node 18+.
+- Native `fetch` — no HTTP dependency. Works on Node 24+.
 - Dual ESM / CommonJS build with type declarations.
 
 Runnable examples live in [`examples/`](examples/).
